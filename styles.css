@@ -224,6 +224,56 @@ a:hover {
   margin-left: auto;
 }
 
+.social-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 12px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--ink);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.social-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.social-link.is-pending {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.social-link.is-pending:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.form-placeholder {
+  padding: 32px;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .footer {
   margin-top: 64px;
   text-align: center;
