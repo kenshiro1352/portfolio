@@ -55,6 +55,13 @@ a:hover {
   font-size: 32px;
 }
 
+.hero h1 rt {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
 .subtitle {
   margin: 6px 0 0;
   color: var(--muted);
