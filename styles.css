@@ -4,6 +4,7 @@
   --border: #e6e6e6;
   --accent: #2b6cb0;
   --bg: #fafafa;
+  --card-bg: #ffffff;
 }
 
 * {
@@ -118,40 +119,109 @@ a:hover {
   margin-bottom: 4px;
 }
 
-.zenn-list {
+.zenn-cards {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
 }
 
-.zenn-list a {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 14px;
+.zenn-card {
   border: 1px solid var(--border);
-  border-radius: 10px;
-  background: #fff;
-  text-decoration: none;
-  color: var(--ink);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--card-bg);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.zenn-list a:hover {
-  transform: translateX(2px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+.zenn-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.zenn-title {
+.zenn-card a {
+  display: block;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.zenn-card-media {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110px;
+}
+
+.zenn-type-tech {
+  background: rgba(59, 130, 246, 0.14);
+}
+
+.zenn-type-idea {
+  background: rgba(139, 92, 246, 0.14);
+}
+
+.zenn-card-emoji {
+  font-size: 40px;
+}
+
+.zenn-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #fff;
+}
+
+.zenn-badge-tech {
+  background: #3b82f6;
+}
+
+.zenn-badge-idea {
+  background: #8b5cf6;
+}
+
+.zenn-card-body {
+  padding: 14px 16px 16px;
+}
+
+.zenn-card-title {
+  margin: 0 0 12px;
   font-size: 14px;
-  line-height: 1.4;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
-.zenn-emoji {
-  font-size: 20px;
-  flex-shrink: 0;
+.zenn-card-meta {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.zenn-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--bg);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.zenn-card-date {
+  margin-left: auto;
 }
 
 .footer {
@@ -181,9 +251,14 @@ a:hover {
     --border: #2e2e2e;
     --accent: #6ea8e0;
     --bg: #121212;
+    --card-bg: #1a1a1a;
   }
 
-  .zenn-list a {
-    background: #1a1a1a;
+  .zenn-type-tech {
+    background: rgba(59, 130, 246, 0.22);
+  }
+
+  .zenn-type-idea {
+    background: rgba(139, 92, 246, 0.22);
   }
 }
