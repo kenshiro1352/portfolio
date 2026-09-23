@@ -302,6 +302,13 @@ a:hover {
   background: #fff;
 }
 
+.spotify-embed {
+  width: 100%;
+  height: 232px;
+  border: none;
+  border-radius: 12px;
+}
+
 .footer {
   margin-top: 64px;
   text-align: center;
